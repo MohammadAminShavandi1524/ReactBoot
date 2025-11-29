@@ -1,0 +1,17 @@
+.headerLogoCon {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+.headerLogoImage {
+  margin-left: 6px;
+  width: 48px;
+  height: 48px;
+}
+
+.headerLogoText {
+  display: flex;
+  font-size: 28px;
+}

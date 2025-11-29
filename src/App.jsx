@@ -1,5 +1,11 @@
+import Button from "react-bootstrap/Button";
+
 function App() {
-  return <>خب خب </>;
+  return (
+    <>
+      <Button>test button</Button>
+    </>
+  );
 }
 
 export default App;
