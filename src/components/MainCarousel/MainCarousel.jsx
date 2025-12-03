@@ -162,11 +162,11 @@ const MainCarousel = ({ autoSlide = false, autoSlideInterval = 3000 }) => {
           </div>
           {/* next and prev */}
           <div className="controllBarCon">
-            <button onClick={mobilePrev} className="controllBar prevBtn">
-              <ChevronRight size={28} />
+            <button onClick={mobilePrev} className="controllBar ">
+              <ChevronRight  />
             </button>
-            <button onClick={mobileNext} className="controllBar nextBtn">
-              <ChevronLeft size={28} />
+            <button onClick={mobileNext} className="controllBar">
+              <ChevronLeft  />
             </button>
           </div>
         </div>

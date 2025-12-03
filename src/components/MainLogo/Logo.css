@@ -4,14 +4,27 @@
   text-decoration: none;
 }
 
-
 .headerLogoImage {
   margin-left: 6px;
   width: 48px;
   height: 48px;
 }
 
+@media (max-width: 1024px) {
+ .headerLogoImage {
+  width: 44px;
+  height: 44px;
+}
+}
+
+
 .headerLogoText {
   display: flex;
   font-size: 28px;
+}
+
+@media (max-width: 1024px) {
+  .headerLogoText {
+    font-size: 24px;
+  }
 }
