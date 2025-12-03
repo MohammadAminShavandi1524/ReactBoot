@@ -1,10 +1,48 @@
 import { Link } from "react-router-dom";
-import Logo from "./logo/logo";
+
 import { ShoppingCart } from "lucide-react";
 import { convertToPersianNumber } from "../utils/utils";
+import Logo from "./MainLogo/Logo";
+import { useCart } from "../modules/checkout/hooks/useCart";
+import { allProducts } from "../data/data";
 
 const Header = () => {
-  const cartItemCount = 0;
+  const {
+    clearCart,
+    removeProduct,
+    decreaseProductCount,
+    increaseProductCount,
+    getCartByUser,
+  } = useCart();
+
+
+   const userProductIds = getCartByUser();
+  
+    const productIds = [];
+    userProductIds.flatMap((o) => productIds.push(o.productId));
+  
+    const userCartProducts = allProducts.filter((product) => {
+      return productIds.includes(product.order);
+    });
+
+  // *** تعداد ایتم های سبد خرید
+
+  const availableProductIds = new Set(
+    userCartProducts
+      ?.filter((product) => product.qty > 0)
+      .map((product) => product.order)
+  );
+
+  const cartItemCount =
+    userProductIds?.reduce((acc, curr) => {
+      if (availableProductIds.has(curr.productId)) {
+        return acc + curr.count;
+      }
+      return acc;
+    }, 0) ?? 0;
+
+
+
   return (
     <header className="header">
       {/* pcBanner */}
@@ -60,9 +98,15 @@ const Header = () => {
 
         {/*navbar shown in more than 1024 devices */}
         <nav className="pcNavbar">
-          <Link to="">گوشی آیفون</Link>
-          <Link to="">گوشی سامسونگ</Link>
-          <Link to="">گوشی شیائومی</Link>
+          <Link className="navLink" to="mobile/iphone">
+            گوشی آیفون
+          </Link>
+          <Link className="navLink" to="">
+            گوشی سامسونگ
+          </Link>
+          <Link className="navLink" to="">
+            گوشی شیائومی
+          </Link>
         </nav>
         {/* ******************************************************************************** */}
 

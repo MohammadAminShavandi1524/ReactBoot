@@ -7,18 +7,29 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App.jsx";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
+import { ToastContainer, toast } from "react-toastify";
+
+import CartPage from "./components/cart/CartPage.jsx";
+import ProductsPage from "./components/products/ProductsPage.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <div dir="rtl" style={{ fontFamily: "IRANYekanX" }} className="">
+      <div
+        dir="rtl"
+        style={{ fontFamily: "IRANYekanX", backgroundColor: "#fcfeff" }}
+        className=""
+      >
         <title>DigiX</title>
         <Header />
         <Routes>
           <Route index element={<App />} />
+          <Route path="mobile/:brand" element={<ProductsPage />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
-      
+
         <Footer />
+        <ToastContainer />
       </div>
     </BrowserRouter>
   </StrictMode>

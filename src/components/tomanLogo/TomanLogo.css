@@ -1,0 +1,26 @@
+.persianLetterWrapper {
+  position: relative;
+  width: 20px; /* اندازه دلخواه */
+  height: 20px; /* اندازه دلخواه */
+  font-size: 9.5px;
+  font-weight: bold;
+  color: #424750;
+}
+
+.letterTo {
+  position: absolute;
+  right: 1.5px;
+  bottom: 1px;
+}
+
+.letterMa {
+  position: absolute;
+  bottom: 0;
+  left: 2.5px;
+}
+
+.letterN {
+  position: absolute;
+  top: -3px;
+  left: 2.5px;
+}
