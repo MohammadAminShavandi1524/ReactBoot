@@ -1,0 +1,25 @@
+.landingCon {
+  margin-top: 24px; /* mt-6 */
+  display: flex;
+  max-width: 1920px;
+  flex-direction: column;
+}
+
+@media (min-width: 480px) {
+  /* s */
+  .landingCon {
+    margin-top: 32px; /* mt-8 */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg */
+  .landingCon {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 52px; /* mt-13 */
+    width: 90%; /* w-9/10 */
+    padding-left: 48px; /* px-12 */
+    padding-right: 48px;
+  }
+}
