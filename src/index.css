@@ -21,25 +21,22 @@
   --footerBG: #ffffff;
 }
 
-
-
-  .productlist-title {
-    display: -webkit-box;
-    line-clamp: 3;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .productlist-mobiletitle {
-    display: -webkit-box;
-    line-clamp: 4;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
+.productlist-title {
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.productlist-mobiletitle {
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 /** header related */
 
@@ -125,9 +122,10 @@
   padding-bottom: 24px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 480px) {
   .pcFixedHeader {
-    display: none;
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -195,9 +193,15 @@
   font-weight: 500;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 480px) {
   .pcNavbar {
-    display: none;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 400px) {
+  .pcNavbar {
+    justify-content: space-between;
   }
 }
 
@@ -205,6 +209,11 @@
   text-decoration: none;
   color: #555;
   font-size: 16px;
+}
+@media (max-width: 480px) {
+  .pcNavbar a {
+    font-size: 14px;
+  }
 }
 
 /** landing page  */
@@ -222,4 +231,169 @@
 
 .h-screen {
   min-height: 100vh;
+}
+
+/* * footer */
+
+.bg-primaryGradient {
+  background-image: linear-gradient(90deg, #0079b1, #263c70);
+}
+
+.footerCon {
+  width: 100%;
+  padding: 16px 16px 16px 16px;
+  padding-top: 32px; /* pt-8 */
+}
+
+@media (min-width: 1024px) {
+  /* lg */
+  .footerCon {
+    padding-top: 60px; /* pt-15 */
+  }
+}
+
+/** mobile footer */
+
+.mobileFooterCon {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border-radius: 16px;
+  padding-left: 8px; /* px-2 */
+  padding-right: 8px;
+  padding-top: 32px; /* pt-8 */
+}
+
+@media (min-width: 1024px) {
+  /* lg:hidden */
+  .mobileFooterCon {
+    display: none;
+  }
+}
+
+.mobileFooterHeader {
+  margin-left: 16px; /* mx-4 */
+  margin-right: 16px;
+  margin-bottom: 16px; /* mb-4 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #fcfcfc; /* border-b */
+  padding-bottom: 16px; /* pb-4 */
+}
+
+.mobileFooterHeader button {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 4px; /* gap-x-1 */
+  border-radius: 8px; /* rounded-lg */
+  background-color: #fcfeff;
+  padding-top: 8px; /* py-2 */
+  padding-bottom: 8px;
+  padding-left: 8px; /* pl-2 */
+  padding-right: 16px; /* pr-4 */
+  border: none;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  /* md */
+  .mobileFooterHeader button {
+    gap: 6px; /* md:gap-x-1.5 */
+    padding-left: 10px; /* md:pl-2.5 */
+  }
+}
+
+.mobileFooterHeader button span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .mobileFooterHeader button span {
+    font-size: 14px;
+  }
+}
+
+.mobileFooterHeader .logoText {
+  color: white;
+  font-size: 24px;
+}
+
+@media (min-width: 640px) {
+  /* sm:text-[28px] */
+  .mobileFooterHeader .logoText {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* md:text-[32px] */
+  .mobileFooterHeader .logoText {
+    font-size: 32px;
+  }
+}
+
+/** pc footer **/
+
+.pcFooterCon {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border-radius: 30px;
+  padding-left: 144px; /* px-36 */
+  padding-right: 144px; /* px-36 */
+  padding-top: 72px; /* pt-18 */
+}
+
+@media (max-width: 1024px) {
+  /* lg */
+  .pcFooterCon {
+    display: none;
+  }
+}
+
+.pcFooterHeader {
+  margin-bottom: 48px; /* mb-12 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #fcfcfc;
+  padding-bottom: 48px; /* pb-12 */
+}
+
+.pcScrollTopBtn {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 16px; /* gap-x-4 */
+  border-radius: 12px; /* rounded-lg */
+  background-color: #fcfeff;
+  padding-top: 16px; /* py-4 */
+  padding-bottom: 16px;
+  padding-right: 28px; /* pr-7 */
+  padding-left: 20px; /* pl-5 */
+  border: none;
+  outline: none;
+}
+
+.pcScrollTopBtn span:first-child {
+  font-size: 15px;
+  font-weight: 500; /* font-medium */
+}
+
+.pcFooterBottom {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 48px;
+}
+
+.pcFooterBottomContent {
+  display: flex;
+  justify-content: center;
+  gap: 12px; 
+  font-size: 14px;
+  color: #ffffff;
 }

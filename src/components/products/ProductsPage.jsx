@@ -176,8 +176,8 @@ const ProductsPage = () => {
                       {/* price */}
 
                       {product.offPrice > 0 ? (
-                        <div class="__priceConDiscount">
-                          <div class="__discountPercent">
+                        <div className="__priceConDiscount">
+                          <div className="__discountPercent">
                             <span>
                               <Percent strokeWidth={2.5} size={14} />
                             </span>
@@ -186,26 +186,26 @@ const ProductsPage = () => {
                             </span>
                           </div>
 
-                          <div class="__price">
-                            <span class="__priceValue">
+                          <div className="__price">
+                            <span className="__priceValue">
                               {product.offPrice.toLocaleString("fa-IR")}
                             </span>
-                            <span class="__priceUnit">تومان</span>
+                            <span className="__priceUnit">تومان</span>
                           </div>
 
-                          <div class="__offPrice">
-                            <span class="__offPriceValue">
+                          <div className="__offPrice">
+                            <span className="__offPriceValue">
                               {product.price.toLocaleString("fa-IR")}
                             </span>
-                            <span class="__offPriceUnit">تومان</span>
+                            <span className="__offPriceUnit">تومان</span>
                           </div>
                         </div>
                       ) : (
-                        <div class="_priceCon">
-                          <span class="_priceValue">
+                        <div className="_priceCon">
+                          <span className="_priceValue">
                             {product.price.toLocaleString("fa-IR")}
                           </span>
-                          <span class="_priceUnit">تومان</span>
+                          <span className="_priceUnit">تومان</span>
                         </div>
                       )}
                     </div>
@@ -241,9 +241,8 @@ const ProductsPage = () => {
                     </div>
                   </div>
 
-                           {/* add to cart btn */}
+                  {/* add to cart btn */}
                   <AddToCartBtn product={product} />
-
                 </div>
               );
             })}

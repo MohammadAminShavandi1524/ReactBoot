@@ -15,15 +15,14 @@ const Header = () => {
     getCartByUser,
   } = useCart();
 
+  const userProductIds = getCartByUser();
 
-   const userProductIds = getCartByUser();
-  
-    const productIds = [];
-    userProductIds.flatMap((o) => productIds.push(o.productId));
-  
-    const userCartProducts = allProducts.filter((product) => {
-      return productIds.includes(product.order);
-    });
+  const productIds = [];
+  userProductIds.flatMap((o) => productIds.push(o.productId));
+
+  const userCartProducts = allProducts.filter((product) => {
+    return productIds.includes(product.order);
+  });
 
   // *** تعداد ایتم های سبد خرید
 
@@ -40,8 +39,6 @@ const Header = () => {
       }
       return acc;
     }, 0) ?? 0;
-
-
 
   return (
     <header className="header">
@@ -108,9 +105,6 @@ const Header = () => {
             گوشی شیائومی
           </Link>
         </nav>
-        {/* ******************************************************************************** */}
-
-        {/* mobile and tablet */}
       </div>
     </header>
   );

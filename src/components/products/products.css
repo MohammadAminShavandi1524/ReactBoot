@@ -23,7 +23,13 @@
   column-gap: 12px;
   font-size: 12px;
   color: #81858b;
-  padding-right: 12px;
+  padding-right: 16px;
+}
+
+@media (max-width: 1024px) {
+    .breadCrumpCon{
+      padding-right: 40px;
+    }
 }
 
 .breadCrumpCon > a {
@@ -313,18 +319,6 @@
 ._priceCon ._priceUnit {
   font-size: 12px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /** s product List */
 
