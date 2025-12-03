@@ -78,9 +78,10 @@ const ProductsPage = () => {
                             ? { fontWeight: "500", color: "#004b68" }
                             : {}
                         }
-                        onClick={() =>
-                          isSelected ? setSort("") : setSort(option.value)
-                        }
+                        onClick={() => {
+                          isSelected ? setSort("") : setSort(option.value);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
                         key={index}
                       >
                         {option.label}
@@ -111,9 +112,10 @@ const ProductsPage = () => {
                           ? { fontWeight: "500", color: "#004b68" }
                           : {}
                       }
-                      onClick={() =>
-                        isSelected ? setSort("") : setSort(option.value)
-                      }
+                      onClick={() => {
+                        isSelected ? setSort("") : setSort(option.value);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
                       key={index}
                     >
                       {option.label}

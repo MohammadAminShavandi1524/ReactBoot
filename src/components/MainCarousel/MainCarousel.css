@@ -93,20 +93,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
 }
 
 @media (min-width: 400px) {
   .controllBar {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
   }
 }
 @media (min-width: 480px) {
   .controllBar {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
   }
 }
 @media (min-width: 768px) {
@@ -121,34 +121,29 @@
     height: 44px;
   }
 }
-@media (min-width: 1536px) {
-  .controllBar {
-    width: 48px;
-    height: 48px;
-  }
-}
+
 
 .controllBar > svg {
-  width: 18px;
-  height: 18px;
+  width: 28px;
+  height: 28px;
 }
 
 @media (min-width: 400px) {
   .controllBar > svg {
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
   }
 }
 @media (min-width: 480px) {
   .controllBar > svg {
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
   }
 }
 @media (min-width: 768px) {
   .controllBar > svg {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
 }
 @media (min-width: 1024px) {
@@ -157,12 +152,7 @@
     height: 32px;
   }
 }
-@media (min-width: 1536px) {
-  .controllBar > svg {
-    width: 32px;
-    height: 32px;
-  }
-}
+
 
 .controllBar:hover {
   background-color: #ffffff;

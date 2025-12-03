@@ -11,10 +11,12 @@ import { ToastContainer, toast } from "react-toastify";
 
 import CartPage from "./components/cart/CartPage.jsx";
 import ProductsPage from "./components/products/ProductsPage.jsx";
+import { ScrollToTop } from "./components/ScrollToTop.js";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <div
         dir="rtl"
         style={{ fontFamily: "IRANYekanX", backgroundColor: "#fcfeff" }}
